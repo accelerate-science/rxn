@@ -1,0 +1,40 @@
+= RXN for Chemistry Tutorials 
+:docinfo: shared
+:icons: font
+:showtitle!:
+:source-highlighter: rouge
+:nofooter:
+
+link:https://rxn.app.accelerate.science/rxn/home[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Home]
+
+[discrete]
+== {doctitle}
+
+[width="100%",cols="20%,20%,20%,20%,20%",]
+|==================================================================================================================================================
+a|
+link:./quick_start.html[RXN for Chemistry Quick Start]
+
+Jump right in to quickly learn the UI of RXN for Chemistry
+
+ a|
+link:./predict_retrosynthesis.html[Predict retrosynthesis]
+
+Learn how to predict possible retrosynthetic routes given a target molecule
+
+ a|
+link:./predict_product.html[Predict product]
+
+Learn about predicting the product of a reaction from its precursors
+
+ a|
+link:./predict_reagents.html[Predict reagents]
+
+Learn about planning and executing a reaction completion starting from an incomplete formula
+
+ a|
+link:./plan_synthesis.html[Plan a synthesis]
+
+Learn about planning and executing a synthetic reaction starting from a target molecule, retrosynthetic route, or procedure.
+
+|==================================================================================================================================================
