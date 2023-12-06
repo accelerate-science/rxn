@@ -234,6 +234,15 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 [%collapsible]
 ====
 
+[IMPORTANT]
+========
+
+The RXN for Chemistry system you are using is not presently connected to a robotic synthesis platform.  
+
+The *Simulation* function is a simulation of a robot-based process to synthesize the given compunds.  The status indicators you will be viewing in the next few steps are sped up from real time (e.g., a step in the synthesis process that would take 3 hours to complete with the robot will pass in only a few moments during the simulation).
+
+========
+
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-30/711f18cd-8031-4af7-ac60-2c543cf33537/ascreenshot.jpeg?tl_px=952,0&br_px=1920,540&force_format=png&width=967&wat_scale=86&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=724,-8[image]
 ====
 
