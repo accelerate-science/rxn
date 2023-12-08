@@ -10,7 +10,7 @@ link:index.html[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Document
 [discrete]
 == {doctitle}
 
-This guide is a short tutorial to quickly learn how to perform a predictive retrosynthesis with  RXN for Chemistry.
+This guide is a tutorial to learn how to predict a retrosynthesis using RXN for Chemistry.
 ////
 NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: https://www.ibm.com/legal/copyright-trademark[Copyright and Trademark Information].
 ////
@@ -18,7 +18,7 @@ NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks o
 [%collapsible]
 =======
 ---
-IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to complete this tutorial.
+IMPORTANT: An RXN for Chemistry account is required to complete this tutorial.
 
 [NOTE]
 ====
@@ -47,10 +47,10 @@ If selecting *Add to pre-existing project* then use the dropdown labeled "Filter
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-06/f1d3d7ed-d12f-4a40-81d1-7ed1b882393f/ascreenshot.jpeg?tl_px=174,161&br_px=1034,642&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212[Screenshot of: Click the "Filter..." field.]
 ====
 
-.*Step 4:* Select "Target molecule" to specify a specific molecule/compound.
+.*Step 4:* Select "Target molecule" to specify a molecule
 [%collapsible]
 ====
-NOTE: If you have a file containing SMILES strings you may use the "From file" option to upload that file for use.
+NOTE: If you have a file containing SMILES strings you may use the "From file" option to upload that file.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-06/ecf69718-996a-4f19-86b8-846fd42851fd/ascreenshot.jpeg?tl_px=21,201&br_px=880,682&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212[Screenshot of: Click here.]
 ====
@@ -70,7 +70,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 .*Step 7:* Copy and paste a SMILES string into the text box.
 [%collapsible]
 ====
-On this page you will paste a SMILES string representing the "target" molecule to use for the retrosynthesis analysis. Use the one shown below. 
+On this page, you will paste a SMILES string representing the "target" molecule for the retrosynthesis. Use the one shown below. 
 
 ========
 The following SMILES string is for a molecule named *paliperidone palmitate* (brand name Invega Sustenna).
@@ -107,9 +107,9 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 There is no difference in the outcome of the analysis between *Automatic* mode and *Interactive* mode, but they each provide a different way of interacting with the results.
 [NOTE]
 ======
-*Automatic mode*: All of the most likely reactions and their reagents are predicted and the presented to you in a set of tables, allowing you to navigate and view each of the predicted retrosynthetic reactions. 
+*Automatic mode*: All of the most likely reactions and their reagents are predicted and presented in a list, allowing you to navigate and view each of the predicted retrosynthetic routes. 
 
-*Interactive mode*: The interactive mode allows you to select step-by-step the reagents and reaction steps that are most likely to result in the target molecule.   
+*Interactive mode*: The interactive mode allows you to select step-by-step the reagents and reaction steps that you would like to use.   
 ======
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-06/92798f07-aa13-450a-b1b8-a1e11a7ca59c/ascreenshot.jpeg?tl_px=176,145&br_px=1036,626&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212[Screenshot of: Click here.]
@@ -120,11 +120,9 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ====
 After selecting the AIZ model, select the first option under "Choose AI model version".
 
-NOTE: AIZ and RXN are both machine learning models that have been trained on slightly different data sets.  Both of these models are powerful tools for retrosynthesis analysis.  
+NOTE: AIZ and RXN are both machine learning models that have been trained on slightly different data sets.  Both of these models are powerful tools for retrosynthetic analysis.  
 
-After selecting the AI model version, you may move the slide control labeled "Speed/Quality Tuning" to set a balance between the rapid completion of results versus detailed and exhaustive results.
-
-NOTE: Specific guidance and documentation for each of these machine learning models will be made available in Q4 2023.  
+After selecting the AI model version, you may move the slide control labeled "Speed/Quality Tuning" to set a balance between how rapidly results are completed versus how exhaustive the search is. 
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-06/a0292f0b-1beb-4ec5-b280-92e3109dd1ab/ascreenshot.jpeg?tl_px=178,209&br_px=1038,690&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212[Screenshot of: Click here.]
 ====
@@ -202,7 +200,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 
 ====
 
-.*Step 22:* Click on the icon shown below to view Alternative Reactions (if any) then close Alternative Reactions sidebar 
+.*Step 22:* Click on the icon shown below to view Alternative Reactions (if any) and then close Alternative Reactions sidebar 
 [%collapsible]
 ====
 
@@ -221,7 +219,7 @@ This option will allow you to view the different reaction sequences identified b
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-10/231971c5-5181-4b65-b398-83ac38cf2f6b/ascreenshot.jpeg?tl_px=0,0&br_px=1075,600&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=218,185[Screenshot of: Click here.]
 ====
 
-.*Step 24:* Click on the TMAP icon as shown below 
+.*Step 24:* Click on the TMAP icon
 [%collapsible]
 ====
 This will take you to a visual TMAP showing your retrosynthesis results in the context of other chemical structures and properties. 
@@ -231,9 +229,9 @@ This will take you to a visual TMAP showing your retrosynthesis results in the c
 
 *What is a TMAP?*
 
-TMAP (TreeMAP) is a set of algorithms to help visualize high-dimensional data sets containing chemical structures. It provides the ability to visualize such data while preserving both global and local features with a sufficient level of detail to allow for human inspection and interpretation.
+TMAP (TreeMAP) is a set of algorithms to help visualize high-dimensional data sets containing chemical structures. It visualizes such data while preserving both global and local features with a sufficient level of detail to allow for human inspection and interpretation.
 
-For more information on TMAP see the following:
+For more information on TMAPs, see the following:
 
 * https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-0416-x[Journal of Cheminformatics paper on TMAP]
 * http://tmap.gdb.tools/[Documentation for Python TMAP library]
@@ -264,7 +262,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 .*Step 27:* Click on the "X" in the upper right of the screen to close the TMAP 
 [%collapsible]
 ====
-After you have finished exploring the TMAP close it to return to the reactions view.
+After you have finished exploring the TMAP, close it to return to the reactions view.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-10/f1613317-902f-480a-a8b8-b17bd50e7e10/ascreenshot.jpeg?tl_px=364,0&br_px=1440,600&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=1010,-8[Screenshot of: Click here.]
 ====
@@ -274,12 +272,12 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ====
 *This completes the Predict Retrosynthesis tutorial for RXN for Chemistry.*
 
-In this tutorial we covered the following:
+In this tutorial, we:
 
-* Executing a retrosynthesis analysis
-* Viewing the results in a Project
-* Viewing the details of the predicted retrosynthesis reactions
-* Viewing the TreeMAP of retrosynthesis reactions
+* Executed a retrosynthesis analysis
+* Viewed the results in a Project
+* Viewed the details of the predicted retrosynthesis reactions
+* Viewed the TreeMAP of retrosynthesis reactions
 ==== 
 
 include::rxn-footer.adoc[]

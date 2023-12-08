@@ -10,7 +10,7 @@ link:index.html[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Document
 [discrete]
 == {doctitle}
 
-This guide is a short tutorial to quickly learn how to use RXN for Chemistry to plan and execute a synthesis starting from several different initial starting points.
+This guide is a tutorial to learn how to use RXN for Chemistry to plan and simulate a synthesis from several different starting points.
 ////
 NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: https://www.ibm.com/legal/copyright-trademark[Copyright and Trademark Information].
 ////
@@ -18,12 +18,12 @@ NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks o
 [%collapsible]
 =======
 ---
-IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to complete this tutorial.
+IMPORTANT: An RXN for Chemistry account is required to complete this tutorial.
 
 [NOTE]
 ====
-* Number of steps in this tutorial: *nn*
-* Estimated time to complete this tutorial: *nn minutes*
+* Number of steps in this tutorial: *31*
+* Estimated time to complete this tutorial: *20 minutes*
 ====
 ---
 
@@ -234,15 +234,6 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 [%collapsible]
 ====
 
-[IMPORTANT]
-========
-
-The RXN for Chemistry system you are using is not presently connected to a robotic synthesis platform.  
-
-The *Simulation* function is a simulation of a robot-based process to synthesize the given compunds.  The status indicators you will be viewing in the next few steps are sped up from real time (e.g., a step in the synthesis process that would take 3 hours to complete with the robot will pass in only a few moments during the simulation).
-
-========
-
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-30/711f18cd-8031-4af7-ac60-2c543cf33537/ascreenshot.jpeg?tl_px=952,0&br_px=1920,540&force_format=png&width=967&wat_scale=86&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=724,-8[image]
 ====
 
@@ -318,7 +309,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 .*Step 31:* Tutorial completed 
 [%collapsible]
 ====
-*This completes the Plan a synthesis tutorial for RXN for Chemistry.*
+*This completes the Plan a Synthesis tutorial for RXN for Chemistry.*
 
 ==== 
 

@@ -10,7 +10,7 @@ link:index.html[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Document
 [discrete]
 == {doctitle}
 
-This guide is a short tutorial to quickly familiarize yourself with the user interface of RXN for Chemistry.
+This guide is a tutorial to familiarize yourself with the user interface of RXN for Chemistry.
 ////
 NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: https://www.ibm.com/legal/copyright-trademark[Copyright and Trademark Information].
 ////
@@ -32,7 +32,7 @@ Our tool is based on molecular transformer models trained on 2.5 million chemica
 [%collapsible]
 =======
 ---
-IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to complete this Quick Start.
+IMPORTANT: An RXN for Chemistry account is required to complete this Quick Start.
 
 [NOTE]
 ====
@@ -44,7 +44,7 @@ IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to com
 .*Step 1:* Log into RXN for Chemistry
 [%collapsible]
 ====
-Point your web browser to https://rxn.app.accelerate.science/, then click on the link in the upper right of the screen labeled ``Get Started''.
+Visit https://rxn.app.accelerate.science/ and click on the button in the upper right of the screen labeled "Get Started!"
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-28/6db2ceed-f079-45a8-b6ca-5f2853e90b42/user_cropped_screenshot.jpeg?tl_px=211,0&br_px=1931,896&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=1033,-5[image]
 ====
@@ -54,9 +54,9 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ====
 If this is your first time using RXN for Chemistry, you have several login options.
 
-You may click on *Sign up* to create login credentials directly on the RXN site. After signing up you may then click on *Log in* to authenticate and access RXN for Chemistry.
+You may click on *Sign up* to create login credentials directly on the RXN site. After signing up, you may click on *Log in* to authenticate and access RXN for Chemistry.
 
-Alternatively you may use your login credentials from Google or Facebook to log into RXN for Cheimstry.
+Alternatively, you may use your login credentials from Google or Facebook to log in to RXN for Chemistry.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-28/350f742a-e23a-4b81-aed8-1a533a6f9a24/user_cropped_screenshot.jpeg?tl_px=85,0&br_px=1805,851&force_format=png&width=1120.0[image]
 ====
@@ -64,17 +64,17 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 .*Step 3:* Add a new Project
 [%collapsible]
 ====
-After authenticating successfully you will be taken the the RXN for Chemistry Home view. Click on the button *Add new project* in the upper right of the Home view.
+After authenticating successfully, you will be taken to the RXN for Chemistry Home page. Click on the button *Add new project* in the upper right of the Home view.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-28/c3338555-671a-4b9c-b89f-c59d98425ec6/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=1583,884&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=1034,-14[image]
 
-TIP: The Home view contains access to all of the major functions of RXN for Chemistry. You can return to the home screen anytime by clicking on the link *Home* in the upper left of the web page
+TIP: The Home view contains access to all of the major functions of RXN for Chemistry. You can return to the home screen at any point by clicking on the link *Home* in the upper left of the web page.
 ====
 
 .*Step 4:* Name your new Project
 [%collapsible]
 ====
-In the dialog box that pops up enter a name for your new project. You will be adding reactions to this project in subsequent tutorials.
+In the dialog box that pops up, enter a name for your new project. You will be adding reactions to this project in subsequent tutorials.
 
 After entering a name for your new project, click on the button *Create a new project*.
 
@@ -90,17 +90,17 @@ You will be taken to the Project Dashboard for your new project. After viewing y
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-28/d2bc6eea-f05c-49b5-89a5-95bdc5c04118/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=1719,943&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=20,20[image]
 
-NOTE: The Project Dashboard page contains a summary of the work and artifacts produced by you and other team members. The information presented shows a summary of all the different models and reactions that have been developed. You have instant access to all of your teams work. There is also a chronological list of *Recent activities* which may be used to track the contributions and work for each team member.
+NOTE: The Project Dashboard page contains a summary of the work and artifacts produced by you and other team members. The information presented shows a summary of all the different analyses that have been run. You have instant access to all of your team's work. There is also a chronological list of *Recent activities* which may be used to track the contributions of each team member.
 ====
 
 .*Step 6:* Go to the Projects view page
 [%collapsible]
 ====
-From the Home view, click on *Projects* in the left hand menu.
+From the Home page, click on *Projects* in the left hand menu.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-28/f91cd632-716e-42f9-ab78-492d787fd373/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=859,480&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=58,93[image]
 
-TIP: The *Projects* link in the upper left of the Home view will take you to the Projects page, which contains a list of all of the projects you and your team have created with RXN for Chemistry.
+TIP: The *Projects* link in the upper left of the Home page will take you to the Projects page, which contains a list of all of the projects you and your team have created within RXN for Chemistry.
 
 ====
 
@@ -115,14 +115,14 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ======
 The Project List contains links to each of your projects. A project consists of the molecular models and the results of all of the chemical reactions simulated with RXN for Chemistry. 
 
-Clicking on the project Name will take you to the Dashboard for that project.
+Clicking on a project name will take you to the dashboard for that project.
 ======
 ====
 
 .*Step 8:* Start the process to Predict retrosynthesis
 [%collapsible]
 ====
-From the Home page view, click on *Predict retrosynthesis*.
+From the Home page, click on *Predict retrosynthesis*.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-09-29/0bae5fd2-cc23-4a9b-9a4e-bec5bbb44f0d/user_cropped_screenshot.jpeg?tl_px=0,9&br_px=859,490&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=362,212[Screenshot of: From the Home page view]
 ====
@@ -130,7 +130,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 .*Step 9:* Add new model to pre-existing project or new project
 [%collapsible]
 ====
-Add to a pre-existing project by selecting *Add to pre-existing project* then selecting the Project name from the drop down list. 
+Add to a pre-existing project by selecting *Add to pre-existing project* and selecting the Project name from the drop down list. 
 
 Or you may create and name a new project by selecting *Add to a brand new project.*
 
@@ -189,7 +189,7 @@ The SMILES string should appear as follows:
 
 `CCCCCCCCCCCCCCCC(=O)OC1CCCN2C1=NC(=C(C2=O)CCN3CCC(CC3)C4=NOC5=C4C=CC(=C5)F)C`
 
-TIP: Instead of building the compound from scratch in the visual editor, you may copy/paste the SMILES string (or any SMILES strings) into the SMILES string editor to quickly add the molecule to  your visual editor workspace.
+TIP: Instead of building the compound from scratch in the visual editor, you may copy/paste this SMILES string (or any SMILES string) into the SMILES string editor to quickly add the molecule to your visual editor workspace.
 
 NOTE: The button labeled *Validate SMILES string* will check the validity of the molecule entered.
 
@@ -200,18 +200,19 @@ NOTE: The button labeled *Validate SMILES string* will check the validity of the
 ====  
 *This completes the Quick Start tutorial for RXN for Chemistry.*
 
-In this tutorial we covered the following:
+In this tutorial, we covered the following:
 
 * Overview of the UI for RXN for Chemistry
 * Description and creation of projects
 * Use of the visual editor for molecules
 * Use of the SMILES string editor
 
-Now that you have the basics covered you are ready to move on to the next series of tutorials:
+Now that you have the basics covered, you are ready to move on to the tool-specific tutorials:
 
 * Predict Retrosynthesis (a continuation of this tutorial)
 * Predict Product
 * Predict Reagents
+* Plan a Synthesis
 ====
 
 include::rxn-footer.adoc[]

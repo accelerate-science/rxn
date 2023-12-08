@@ -10,7 +10,7 @@ link:index.html[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Document
 [discrete]
 == {doctitle}
 
-This guide is a short tutorial to quickly learn how to use RXN for Chemistry predict forward reactions when starting with a set of known reagents.
+This guide is a tutorial to learn how to use RXN for Chemistry to predict which forward reaction will occur from a set of given reagents.
 ////
 NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: https://www.ibm.com/legal/copyright-trademark[Copyright and Trademark Information].
 ////
@@ -18,7 +18,7 @@ NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks o
 [%collapsible]
 =======
 ---
-IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to complete this tutorial.
+IMPORTANT: An RXN for Chemistry account is required to complete this tutorial.
 
 [NOTE]
 ====
@@ -65,7 +65,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 On this page you will paste a SMILES string representing the reactant molecules to use for the product prediction. Use the one shown below. 
 
 ========
-SMILES string for use in product prediction. There are four molecules and one potassium ion in this string:
+We will use the SMILES string below for our starting materials. There are four organic molecules and a potassium counterion, separated by periods.
 
 [literal]
 CC(C)(C)OC(=O)N1CCCC1[B-](F)(F)F.CN(C)C=O.COC(=O)c1ccc(/C=C/S(=O)(=O)c2ccccc2)cc1.Cc1c(Br)cc2c(-c3ccccc3C(=O)O)c3cc(Br)c(=O)c(Br)c-3oc2c1Br.[K+]
@@ -98,8 +98,6 @@ image:./images/predict_product_s8.png[predict_product_s8.png]
 [%collapsible]
 ====
 
-NOTE: Specific guidance and documentation for each of the machine learning models listed will be made available in Q4 2023.  
-
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-12/c50e8305-fa85-4de8-8b2b-d393ddf3fb7e/ascreenshot.jpeg?tl_px=629,342&br_px=1704,943&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=502,276[Screenshot of: Click "Run forward reaction prediction"]
 ====
 
@@ -109,7 +107,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 
 Results will be presented in a visual format as show below.  You also have the option of downloading the results as a SMILES string or a PDF file of the molecular models.
 
-NOTE: The process of generating the first result show below can take anywhere from a few seconds to a few minutes, depending upon the complexity of the reactions.
+NOTE: The process of generating the first result shown below can take anywhere from a few seconds to a few minutes, depending upon the complexity of the reactions.
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-12/20649881-61af-42b1-ad50-0ff3734c6312/ascreenshot.jpeg?tl_px=844,0&br_px=1920,600&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=731,-7[Screenshot of: Click "Generate more outcomes"]
 ====
@@ -257,12 +255,12 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ====
 *This completes the Predict product tutorial for RXN for Chemistry.*
 
-In this tutorial we covered the following:
+In this tutorial, we:
 
-* Executing a product prediction 
-* Viewing the results in a Project
-* Viewing the details of the predicted product reactions
-* Viewing the TreeMAP, fingerprint, and attention heat map of the predicted product reactions
+* Executed a product prediction 
+* Viewed the results in a Project
+* Viewed the details of the predicted product reactions
+* Viewed the TreeMAP, fingerprint, and attention heat map of the predicted product reactions
 ==== 
 
 include::rxn-footer.adoc[]

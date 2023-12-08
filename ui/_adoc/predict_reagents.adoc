@@ -10,7 +10,7 @@ link:index.html[icon:arrow-circle-left[2x]  Return to RXN for Chemistry Document
 [discrete]
 == {doctitle}
 
-This guide is a short tutorial to quickly learn how to use RXN for Chemistry predict reagents when starting with a partial set of known reagents and known end product.
+This guide is a tutorial to learn how to use RXN for Chemistry to predict the reagents needed to convert a given starting material to a desired product.
 ////
 NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: https://www.ibm.com/legal/copyright-trademark[Copyright and Trademark Information].
 ////
@@ -18,7 +18,7 @@ NOTE: IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks o
 [%collapsible]
 =======
 ---
-IMPORTANT: An account on a SaaS instance of RXN for Chemistry is required to complete this tutorial.
+IMPORTANT: An RXN for Chemistry account is required to complete this tutorial.
 
 [NOTE]
 ====
@@ -60,7 +60,7 @@ image:images/predict_reagents_s4.png[Step 4]
 TIP: You may also use the Ketcher visual molecule editor by clicking on the link "Use Ketcher" above each text box.
 
 ========
-For the purposes of this tutorial you may use the following for a reagent:
+For the purposes of this tutorial you may use the following SMILES string for the reagent:
 
 [literal]
 C/C(C)=C/c1ccccc1
@@ -76,7 +76,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 TIP: You may also use the Ketcher visual molecule editor by clicking on the link "Use Ketcher" above each text box.
 
 ========
-For the purposes of this tutorial you may use the following for a product:
+For the purposes of this tutorial you may use the following SMILES string for the product:
 
 [literal]
 CC3(CN(CC3c4ccccc4)Cc5ccccc5)C
@@ -97,7 +97,7 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 [%collapsible]
 ====
 
-NOTE: The best AI model is selected in the dropdown list but you may try others if available.
+NOTE: The most recent AI model is selected in the dropdown list by default, but you may try others as desired.  
 
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-16/8d8f5bdf-772c-4d4b-ba55-f31211710cb7/ascreenshot.jpeg?tl_px=307,203&br_px=1382,804&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=502,327[image]
 ====
@@ -224,7 +224,7 @@ The reaction fingerprint for the predicted product reaction will be copied to th
 ========
 A unique "fingerprint" for a chemical reaction can be computed and used as a means to compare molecules and reactions for similarity. 
 
-For more information on fingerprints as used here see the following: link:https://www.nature.com/articles/s42256-020-00284-w.epdf?sharing_token=CGHu6tcqBiFmC1nRfnOrxNRgN0jAjWel9jnR3ZoTv0NiJSBmQfyOiLfbwen1TgEszNU5Xao_0Gs7D0u8tLUOJxaLAUc469WZKWG5K9wsqIe98dZOREVhQ33gqcr33AgNUjnp4cVXojp4aKe2xCbWtNaxOZtpOjBOsdX3O8yxVkI%3D[Mapping the space of chemical reactions using attention-based neural networks]
+For more information on fingerprints as used here, see the following: link:https://www.nature.com/articles/s42256-020-00284-w.epdf?sharing_token=CGHu6tcqBiFmC1nRfnOrxNRgN0jAjWel9jnR3ZoTv0NiJSBmQfyOiLfbwen1TgEszNU5Xao_0Gs7D0u8tLUOJxaLAUc469WZKWG5K9wsqIe98dZOREVhQ33gqcr33AgNUjnp4cVXojp4aKe2xCbWtNaxOZtpOjBOsdX3O8yxVkI%3D[Mapping the space of chemical reactions using attention-based neural networks]
 ========
 image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-12/c365b0bc-e304-47f8-b918-1535a4488a6e/ascreenshot.jpeg?tl_px=844,0&br_px=1920,600&force_format=png&wat_scale=95&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=892,53[Screenshot of: Click here.]
 ====
@@ -258,12 +258,12 @@ image:https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023
 ====
 *This completes the Predict reagent tutorial for RXN for Chemistry.*
 
-In this tutorial we covered the following:
+In this tutorial, we:
 
-* Executing a reagents prediction 
-* Viewing the results in a Project
-* Viewing the details of the predicted reagent reactions
-* Viewing the TreeMAP, fingerprint, and attention heat map of the predicted reagent reactions
+* Executed a reagents prediction 
+* Viewed the results in a Project
+* Viewed the details of the predicted reagent reactions
+* Viewed the TreeMAP, fingerprint, and attention heat map of the predicted reagent reactions
 ==== 
 
 include::rxn-footer.adoc[]
