@@ -1,0 +1,37 @@
+==============================================
+Predict Reagents
+==============================================
+
+Predict reagents needed to convert given starting material to given product
+-----------------------------------------------------------------------------------
+
+This tool predicts which reagents would allow you to convert your
+starting material to the desired product.
+
+.. code:: ipython3
+    
+    # starting_material_smiles and product_smiles are the two
+    # arguments to pass to predict_reagents()
+    starting_material_smiles = 'C1=C(C=O)C=C(Br)C=C1'
+    product_smiles = 'C1C=CC(Br)=CC=1/C=C/C(O)=O'
+    response = rxn.predict_reagents(
+        starting_material_smiles,
+        product_smiles
+    )
+    print(response["prediction_id"])
+
+Once the SMILES strings have been passed to the predict_reagents() function, run the code
+below to check status, until SUCCESS is returned.
+
+.. code:: ipython3
+
+    result = rxn.get_predict_reagents_results(response["prediction_id"])
+    print(result["response"]["payload"]["status"])
+
+To display the overall predicted reaction results:
+
+.. code:: ipython3
+
+    for item in result["response"]["payload"]["sequences"]:
+        print(f'Confidence: {item["confidence"]}')
+        display(AllChem.ReactionFromSmarts(item["smiles"]))

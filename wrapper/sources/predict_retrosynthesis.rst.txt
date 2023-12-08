@@ -1,0 +1,76 @@
+==============================================
+Predict Retrosynthesis
+==============================================
+
+Predict possible retrosynthetic routes given target molecule
+-------------------------------------------------------------
+
+The predict retrosynthesis tool supports both *automatic* and *user-guided*
+retrosynthesis. 
+
+.. TIP:: 
+
+    We recommend that user-guided retrosynthesis be done
+    within the RXN for Chemistry site since the GUI workflow is more
+    user-friendly. 
+
+The automatic retrosynthesis option is shown below.
+
+To predict a retrosynthesis using default parameters, simply define a
+molecule in SMILES format and pass it as an argument to the
+``predict_automatic_retrosynthesis`` function.
+
+.. code:: ipython3
+
+    smiles = 'CC(=O)NC1=CC=C(Br)C=C1'
+    predict_automatic_retrosynthesis_response = rxn.predict_automatic_retrosynthesis(product=smiles)
+
+Check on the status of the retrosynthesis prediction. - ‘NEW’: Job is
+still running. - ‘SUCCESS’: Job is complete.
+
+Rerun the cell below until ‘SUCCESS’ is returned.
+
+.. code:: ipython3
+
+    predict_automatic_retrosynthesis_results = rxn.get_predict_automatic_retrosynthesis_results(
+        predict_automatic_retrosynthesis_response['prediction_id']
+    )
+    predict_automatic_retrosynthesis_results['status']
+
+Upon ‘SUCCESS’ we can assess the predicted retrosynthetic paths.
+
+But first we define a function ``collect_reactions_from_retrosynthesis``
+to parse the results of the retrosynthesis prediction.
+
+.. code:: ipython3
+
+    from typing import Dict, List
+    from IPython.display import display
+    from rdkit import Chem
+    from rdkit.Chem import AllChem
+    
+    # To parse results from the predict retrosynthesis tool
+    def collect_reactions_from_retrosynthesis(tree: Dict) -> List[str]:
+        reactions = []
+        if 'children' in tree and len(tree['children']):
+            reactions.append(
+                AllChem.ReactionFromSmarts('{}>>{}'.format(
+                    '.'.join([node['smiles'] for node in tree['children']]),
+                    tree['smiles']
+                ), useSmiles=True)
+            )
+        for node in tree['children']:
+            reactions.extend(collect_reactions_from_retrosynthesis(node))
+        return reactions
+
+We use this helper function to display the different retrosynthesis
+routes produced by the tool.
+
+.. code:: ipython3
+
+    for index, tree in enumerate(predict_automatic_retrosynthesis_results['retrosynthetic_paths']):
+        print('Showing path {} with confidence {}:'.format(index, tree['confidence']))
+        for reaction in collect_reactions_from_retrosynthesis(tree):
+            display(Chem.Draw.ReactionToImage(reaction))
+
+

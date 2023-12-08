@@ -1,0 +1,64 @@
+==============================================
+Plan a Synthesis
+==============================================
+
+Plan a synthesis starting from a target molecule, a retrosynthetic route, or an experimental procedure in text format
+----------------------------------------------------------------------------------------------------------------------
+
+.. TIP:: 
+
+    We recommend this tool be used within the RXN for Chemistry
+    GUI instead of via API, since the GUI workflow is more
+    user-friendly.
+
+We will convert the retrosynthesis prediction derived previously (see :doc:`predict_retrosynthesis`) into a
+synthesis plan. 
+
+.. NOTE:: The code below may take a few moments to complete.
+
+.. code:: ipython3
+
+    create_synthesis_from_sequence_response = rxn.create_synthesis_from_sequence(
+        sequence_id=predict_automatic_retrosynthesis_results['retrosynthetic_paths'][1]['sequenceId']
+    )
+    print(f'Identifier for the synthesis: {create_synthesis_from_sequence_response["synthesis_id"]}')
+
+The code below will allow you get the actions predicted by the AI model.
+
+.. code:: ipython3
+
+    synthesis_id = create_synthesis_from_sequence_response['synthesis_id']
+    node_id = rxn.get_node_ids(synthesis_id=synthesis_id)[-1]
+
+Use the code below to print the actions predicted by the AI model.
+
+.. code:: ipython3
+
+    actions_and_product = rxn.get_reaction_settings(synthesis_id=synthesis_id, node_id=node_id)
+    print(actions_and_product)
+
+.. code:: ipython3
+
+    import json
+    
+    node_actions, product = actions_and_product['actions'], actions_and_product['product']
+    
+    for index, action in enumerate(node_actions, 1):
+        print(f'Action {index}:\n{json.dumps(action, indent=4)}\n')
+
+.. NOTE:: Changing actions
+
+    In the code blow below, the *adding acetyl chloride* action needs to be changed to not be dropwise
+    since solids are added in pins. We also remove the purify action since
+    it is not currently supported by commonly used robotic hardware.
+
+.. code:: ipython3
+
+    # update the the action so the solid is not added dropwise
+    node_actions[3]['content']['dropwise']['value'] = False
+    
+    # remove the purify action 
+    node_actions.pop(11)
+    
+    # update the node actions
+    rxn.update_reaction_settings(synthesis_id=synthesis_id, node_id=node_id, actions=node_actions, product=product)

@@ -1,0 +1,41 @@
+==============================================
+Reaction Digitization
+==============================================
+
+Convert images of reaction schemes to machine-readable format
+------------------------------------------------------------------
+
+.. TIP:: 
+
+    We recommend this tool be used within the RXN for Chemistry
+    site instead of via API (as shown here), since the GUI workflow is more
+    user-friendly.
+
+.. code:: ipython3
+
+    # Upload the picture and get back the file id
+    # Use full path and ensure the path is correct
+    try:
+        response = rxn.upload_file('./reaction_scheme.png')
+        file_id = response['response']['payload']['id']
+        print(file_id)
+    except FileNotFoundError:
+        print("File path provided does not exist")
+
+Use the file_id to start the digitization process. This may take some
+time.
+
+.. code:: ipython3
+
+    result = rxn.digitize_reaction(file_id)
+    result['response']['payload']['reactions']
+
+Display the results in a human-readable way.
+
+.. code:: ipython3
+
+    for item in result["response"]["payload"]["reactions"]:
+        print(item["reactant"]["content"])
+        print(f"   --- {item['text']['content']} --->")
+        print(item["product"]["content"])
+        print()

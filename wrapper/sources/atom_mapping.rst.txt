@@ -1,0 +1,18 @@
+==============================================
+Atom Mapping
+==============================================
+
+Map atoms from starting materials to product
+------------------------------------------------
+
+Atom mapping of a chemical reaction is a mapping between the atoms in the reactant molecules and the atoms in the product molecules.
+
+The ``predict_reaction_properties`` function will perform atom mapping
+as shown in the code below.
+
+.. code:: ipython3
+
+    reaction_prop = rxn.predict_reaction_properties(
+        ['CC(=O)[OH]>>CC(=O)OCC']
+    )
+    print(reaction_prop['response']['payload']['content'][0]['value'])

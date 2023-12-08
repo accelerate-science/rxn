@@ -1,0 +1,54 @@
+=============================================
+Projects
+=============================================
+
+What is a Project?
+-------------------
+
+The artifacts and results from the four RXN tools listed below can be saved to a project. Projects
+help to organize analyses, enable collaboration, and may be shared with colleagues.
+
+-  Predict retrosynthesis
+-  Predict product
+-  Predict reagents
+-  Plan a synthesis
+
+For on-premise installations (uncommon)
+---------------------------------------
+
+For those with an on-premise installation of RXN for Chemistry, you must refer to your on-premise installation via an environment variable:
+
+.. code:: console
+
+    export RXN4CHEMISTRY_BASE_URL="https://some.other.rxn.server"
+
+Or by setting a different host in your python code:
+
+.. code:: ipython3
+
+    # uncomment the line below to set a different host
+    # rxn.set_base_url('https://some.other.rxn.server')
+
+Create a new project
+--------------------
+
+To create a project, run the ``create_project`` function.
+
+This step can be skipped if you want to use a project that you have
+created previously.
+
+.. code:: ipython3
+
+    rxn.create_project("rxn4chemistry_tour")
+    rxn.set_project(rxn.project_id)
+    print(f"The project ID is {rxn.project_id}")
+
+Choose an existing project
+--------------------------
+
+If you have already created the project, you can work within it by
+running ``set_project``.
+
+.. code:: ipython3
+
+    rxn.set_project("YOUR_PROJECT_ID")

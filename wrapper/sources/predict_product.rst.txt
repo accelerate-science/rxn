@@ -1,0 +1,112 @@
+==============================================
+Predict Product
+==============================================
+
+Predict the product of a chemical reaction given the starting materials
+------------------------------------------------------------------------
+
+RXN for Chemistry uses a forward reaction prediction model based on
+molecular transformers.
+
+To run a forward reaction prediction, use the ``predict_reaction``
+function. Pass the starting materials in SMILES format, appended with a
+``.`` character as shown below.
+
+.. code:: ipython3
+
+    predict_reaction_response = rxn.predict_reaction(
+        'BrBr.c1ccc2cc3ccccc3cc2c1'
+    )
+
+Rerun the cell below until SUCCESS is returned.
+
+.. code:: ipython3
+
+    predict_reaction_results = rxn.get_predict_reaction_results(
+        predict_reaction_response['prediction_id']
+    )
+    print(predict_reaction_results["response"]["payload"]["status"])
+
+Define a helper function to parse the output.
+
+.. code:: ipython3
+
+    def get_reaction_from_smiles(reaction_smiles: str) -> Chem.rdChemReactions.ChemicalReaction:
+        return AllChem.ReactionFromSmarts(reaction_smiles, useSmiles=True)
+
+Use the helper function to show the predicted product.
+
+.. code:: ipython3
+
+    get_reaction_from_smiles(predict_reaction_results['response']['payload']['attempts'][0]['smiles'])
+
+It is also possible to run forward reaction predictions in batches to
+use the service in a high-throughput fashion. Note that this will not
+store the information in any project.
+
+.. code:: ipython3
+
+    predict_rection_batch_response = rxn.predict_reaction_batch(
+        precursors_list=['BrBr.c1ccc2cc3ccccc3cc2c1', 'Cl.c1ccc2cc3ccccc3cc2c1']
+    )
+
+Rerun the cell below until a dictionary is returned.
+
+.. code:: ipython3
+
+    result = rxn.get_predict_reaction_batch_results(
+        predict_rection_batch_response['task_id']
+    )
+    print(result)
+
+Then we can display the prediction results for each of the reactions in
+the batch.
+
+.. code:: ipython3
+
+    for reaction_prediction in result["predictions"]:
+        print(f'Confidence: {reaction_prediction["confidence"]}')
+        display(get_reaction_from_smiles(reaction_prediction['smiles']))
+
+It is also possible to predict the top N products for each reaction (in
+batch).
+
+.. code:: ipython3
+
+    response = rxn.predict_reaction_batch_topn(
+        precursors_lists=[
+            ["BrBr", "c1ccc2cc3ccccc3cc2c1"],
+            ["BrBr", "c1ccc2cc3ccccc3cc2c1CCO"],
+            ["Cl", "CCC(=O)NCCC", "O"],
+        ],
+        topn=5,
+    )
+
+Rerun the cell below until SUCCESS is returned.
+
+.. code:: ipython3
+
+    result = rxn.get_predict_reaction_batch_topn_results(
+        response["task_id"]
+    )
+    try:
+        result["predictions"]
+        print("SUCCESS")
+    except:
+        print("Prediction not ready, try again")
+
+Then we list the predicted products, alongside their confidences, for
+each of the three reactions.
+
+.. code:: ipython3
+
+    for i, reaction_predictions in enumerate(result['predictions'], 1):
+        print(f'Outcomes for reaction no {i}:')
+        for j, prediction in enumerate(reaction_predictions["results"], 1):
+            product_smiles = ".".join(prediction["smiles"])
+            confidence = prediction["confidence"]
+            print(f'  Product(s) {j}: {product_smiles}, with confidence {confidence}')
+
+.. IMPORTANT:: Save your results
+
+    The results for batch predictions are only stored temporarily in our databases, so we strongly recommend saving them elsewhere.
