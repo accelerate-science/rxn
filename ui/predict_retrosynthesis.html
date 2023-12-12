@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <title>RXN for Chemistry - Predict retrosynthesis</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -63,7 +63,7 @@ table {
 </div>
 <h2 id="_rxn_for_chemistry_predict_retrosynthesis" class="discrete">RXN for Chemistry - Predict retrosynthesis</h2>
 <div class="paragraph">
-<p>This guide is a short tutorial to quickly learn how to perform a predictive retrosynthesis with  RXN for Chemistry.</p>
+<p>This guide is a tutorial to learn how to predict a retrosynthesis using RXN for Chemistry.</p>
 </div>
 <details>
 <summary class="title"><strong>Start Tutorial</strong></summary>
@@ -76,7 +76,7 @@ table {
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-An account on a SaaS instance of RXN for Chemistry is required to complete this tutorial.
+An RXN for Chemistry account is required to complete this tutorial.
 </td>
 </tr>
 </table>
@@ -140,7 +140,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 4:</strong> Select "Target molecule" to specify a specific molecule/compound.</summary>
+<summary class="title"><strong>Step 4:</strong> Select "Target molecule" to specify a molecule</summary>
 <div class="content">
 <div class="admonitionblock note">
 <table>
@@ -149,7 +149,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you have a file containing SMILES strings you may use the "From file" option to upload that file for use.
+If you have a file containing SMILES strings you may use the "From file" option to upload that file.
 </td>
 </tr>
 </table>
@@ -179,7 +179,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 7:</strong> Copy and paste a SMILES string into the text box.</summary>
 <div class="content">
 <div class="paragraph">
-<p>On this page you will paste a SMILES string representing the "target" molecule to use for the retrosynthesis analysis. Use the one shown below.</p>
+<p>On this page, you will paste a SMILES string representing the "target" molecule for the retrosynthesis. Use the one shown below.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -237,10 +237,10 @@ If you have a file containing SMILES strings you may use the "From file" option 
 </td>
 <td class="content">
 <div class="paragraph">
-<p><strong>Automatic mode</strong>: All of the most likely reactions and their reagents are predicted and the presented to you in a set of tables, allowing you to navigate and view each of the predicted retrosynthetic reactions.</p>
+<p><strong>Automatic mode</strong>: All of the most likely reactions and their reagents are predicted and presented in a list, allowing you to navigate and view each of the predicted retrosynthetic routes.</p>
 </div>
 <div class="paragraph">
-<p><strong>Interactive mode</strong>: The interactive mode allows you to select step-by-step the reagents and reaction steps that are most likely to result in the target molecule.</p>
+<p><strong>Interactive mode</strong>: The interactive mode allows you to select step-by-step the reagents and reaction steps that you would like to use.</p>
 </div>
 </td>
 </tr>
@@ -264,25 +264,13 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-AIZ and RXN are both machine learning models that have been trained on slightly different data sets.  Both of these models are powerful tools for retrosynthesis analysis.
+AIZ and RXN are both machine learning models that have been trained on slightly different data sets.  Both of these models are powerful tools for retrosynthetic analysis.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>After selecting the AI model version, you may move the slide control labeled "Speed/Quality Tuning" to set a balance between the rapid completion of results versus detailed and exhaustive results.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Specific guidance and documentation for each of these machine learning models will be made available in Q4 2023.
-</td>
-</tr>
-</table>
+<p>After selecting the AI model version, you may move the slide control labeled "Speed/Quality Tuning" to set a balance between how rapidly results are completed versus how exhaustive the search is.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-06/a0292f0b-1beb-4ec5-b280-92e3109dd1ab/ascreenshot.jpeg?tl_px=178,209&amp;br_px=1038,690&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=402,212" alt="Screenshot of: Click here."></span></p>
@@ -407,7 +395,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 22:</strong> Click on the icon shown below to view Alternative Reactions (if any) then close Alternative Reactions sidebar</summary>
+<summary class="title"><strong>Step 22:</strong> Click on the icon shown below to view Alternative Reactions (if any) and then close Alternative Reactions sidebar</summary>
 <div class="content">
 <div class="admonitionblock note">
 <table>
@@ -438,7 +426,7 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 24:</strong> Click on the TMAP icon as shown below</summary>
+<summary class="title"><strong>Step 24:</strong> Click on the TMAP icon</summary>
 <div class="content">
 <div class="paragraph">
 <p>This will take you to a visual TMAP showing your retrosynthesis results in the context of other chemical structures and properties.</p>
@@ -454,10 +442,10 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 <p><strong>What is a TMAP?</strong></p>
 </div>
 <div class="paragraph">
-<p>TMAP (TreeMAP) is a set of algorithms to help visualize high-dimensional data sets containing chemical structures. It provides the ability to visualize such data while preserving both global and local features with a sufficient level of detail to allow for human inspection and interpretation.</p>
+<p>TMAP (TreeMAP) is a set of algorithms to help visualize high-dimensional data sets containing chemical structures. It visualizes such data while preserving both global and local features with a sufficient level of detail to allow for human inspection and interpretation.</p>
 </div>
 <div class="paragraph">
-<p>For more information on TMAP see the following:</p>
+<p>For more information on TMAPs, see the following:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -510,7 +498,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <summary class="title"><strong>Step 27:</strong> Click on the "X" in the upper right of the screen to close the TMAP</summary>
 <div class="content">
 <div class="paragraph">
-<p>After you have finished exploring the TMAP close it to return to the reactions view.</p>
+<p>After you have finished exploring the TMAP, close it to return to the reactions view.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-10-10/f1613317-902f-480a-a8b8-b17bd50e7e10/ascreenshot.jpeg?tl_px=364,0&amp;br_px=1440,600&amp;force_format=png&amp;wat_scale=95&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=1010,-8" alt="Screenshot of: Click here."></span></p>
@@ -524,21 +512,21 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p><strong>This completes the Predict Retrosynthesis tutorial for RXN for Chemistry.</strong></p>
 </div>
 <div class="paragraph">
-<p>In this tutorial we covered the following:</p>
+<p>In this tutorial, we:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Executing a retrosynthesis analysis</p>
+<p>Executed a retrosynthesis analysis</p>
 </li>
 <li>
-<p>Viewing the results in a Project</p>
+<p>Viewed the results in a Project</p>
 </li>
 <li>
-<p>Viewing the details of the predicted retrosynthesis reactions</p>
+<p>Viewed the details of the predicted retrosynthesis reactions</p>
 </li>
 <li>
-<p>Viewing the TreeMAP of retrosynthesis reactions</p>
+<p>Viewed the TreeMAP of retrosynthesis reactions</p>
 </li>
 </ul>
 </div>
@@ -550,11 +538,11 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </div>
 <hr>
 <div class="paragraph">
-<p><a href="mailto:ray.lopez@us.ibm.com"><span class="icon"><i class="fa fa-comment fa-2x"></i></span> Please send in your comments and suggestions regarding this content.</a></p>
+<p><a href="mailto:ray.lopez@us.ibm.com"><span class="icon"><i class="fa fa-comment"></i></span> <span class="small">Please send in your comments and suggestions regarding this content.</span></a></p>
 </div>
 <hr>
 <div class="paragraph">
-<p>IBM, the IBM logo, and ibm.com® are trademarks or registered trademarks of IBM Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available here: <a href="https://www.ibm.com/legal/copyright-trademark">Copyright and Trademark Information</a>.</p>
+<p><span class="small">IBM&#174;, the IBM&#174; logo, and ibm.com&#174; are trademarks or registered trademarks of IBM&#174; Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM&#174; or other companies. A current list of IBM&#174; trademarks is available here: <a href="https://www.ibm.com/legal/copyright-trademark">Copyright and Trademark Information</a>.</span></p>
 </div>
 </div>
 </details>
