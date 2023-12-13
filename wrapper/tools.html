@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tools available via Python API Wrapper &#8212; RXN for Chemistry Python Wrapper  documentation</title>
+    <link rel="stylesheet" type="text/css" href="static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="static/basic_mod.css" />
+    <script data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
+    <script src="static/jquery.js"></script>
+    <script src="static/underscore.js"></script>
+    <script src="static/doctools.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="index.html" title="Go to homepage">RXN for Chemistry Python Wrapper  documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tools available via Python API Wrapper</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tools-available-via-python-api-wrapper">
+<h1>Tools available via Python API Wrapper<a class="headerlink" href="#tools-available-via-python-api-wrapper" title="Permalink to this headline">¶</a></h1>
+<section id="predict-retrosynthesis">
+<span id="predict-retrosynthesis-target"></span><h2>Predict Retrosynthesis<a class="headerlink" href="#predict-retrosynthesis" title="Permalink to this headline">¶</a></h2>
+<section id="predict-possible-retrosynthetic-routes-given-target-molecule">
+<h3>Predict possible retrosynthetic routes given target molecule<a class="headerlink" href="#predict-possible-retrosynthetic-routes-given-target-molecule" title="Permalink to this headline">¶</a></h3>
+<p>The predict retrosynthesis tool supports both <em>automatic</em> and <em>user-guided</em>
+retrosynthesis.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We recommend that user-guided retrosynthesis be done
+within the RXN for Chemistry site since the GUI workflow is more
+user-friendly.</p>
+</div>
+<p>The automatic retrosynthesis option is shown below.</p>
+<p>To predict a retrosynthesis using default parameters, simply define a
+molecule in SMILES format and pass it as an argument to the
+<code class="docutils literal notranslate"><span class="pre">predict_automatic_retrosynthesis</span></code> function.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smiles</span> <span class="o">=</span> <span class="s1">&#39;CC(=O)NC1=CC=C(Br)C=C1&#39;</span>
+<span class="n">predict_automatic_retrosynthesis_response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_automatic_retrosynthesis</span><span class="p">(</span><span class="n">product</span><span class="o">=</span><span class="n">smiles</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Check on the status of the retrosynthesis prediction. - ‘NEW’: Job is
+still running. - ‘SUCCESS’: Job is complete.</p>
+<p>Rerun the cell below until ‘SUCCESS’ is returned.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict_automatic_retrosynthesis_results</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_predict_automatic_retrosynthesis_results</span><span class="p">(</span>
+    <span class="n">predict_automatic_retrosynthesis_response</span><span class="p">[</span><span class="s1">&#39;prediction_id&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">predict_automatic_retrosynthesis_results</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Upon ‘SUCCESS’ we can assess the predicted retrosynthetic paths.</p>
+<p>But first we define a function <code class="docutils literal notranslate"><span class="pre">collect_reactions_from_retrosynthesis</span></code>
+to parse the results of the retrosynthesis prediction.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="nn">rdkit.Chem</span> <span class="kn">import</span> <span class="n">AllChem</span>
+
+<span class="c1"># To parse results from the predict retrosynthesis tool</span>
+<span class="k">def</span> <span class="nf">collect_reactions_from_retrosynthesis</span><span class="p">(</span><span class="n">tree</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="n">reactions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="s1">&#39;children&#39;</span> <span class="ow">in</span> <span class="n">tree</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">tree</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">]):</span>
+        <span class="n">reactions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">AllChem</span><span class="o">.</span><span class="n">ReactionFromSmarts</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&gt;&gt;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">node</span><span class="p">[</span><span class="s1">&#39;smiles&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">]]),</span>
+                <span class="n">tree</span><span class="p">[</span><span class="s1">&#39;smiles&#39;</span><span class="p">]</span>
+            <span class="p">),</span> <span class="n">useSmiles</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">]:</span>
+        <span class="n">reactions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">collect_reactions_from_retrosynthesis</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">reactions</span>
+</pre></div>
+</div>
+<p>We use this helper function to display the different retrosynthesis
+routes produced by the tool.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">tree</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">predict_automatic_retrosynthesis_results</span><span class="p">[</span><span class="s1">&#39;retrosynthetic_paths&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Showing path </span><span class="si">{}</span><span class="s1"> with confidence </span><span class="si">{}</span><span class="s1">:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">tree</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]))</span>
+    <span class="k">for</span> <span class="n">reaction</span> <span class="ow">in</span> <span class="n">collect_reactions_from_retrosynthesis</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">Draw</span><span class="o">.</span><span class="n">ReactionToImage</span><span class="p">(</span><span class="n">reaction</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="predict-product">
+<h2>Predict Product<a class="headerlink" href="#predict-product" title="Permalink to this headline">¶</a></h2>
+<section id="predict-the-product-of-a-chemical-reaction-given-the-starting-materials">
+<h3>Predict the product of a chemical reaction given the starting materials<a class="headerlink" href="#predict-the-product-of-a-chemical-reaction-given-the-starting-materials" title="Permalink to this headline">¶</a></h3>
+<p>RXN for Chemistry uses a forward reaction prediction model based on
+molecular transformers.</p>
+<p>To run a forward reaction prediction, use the <code class="docutils literal notranslate"><span class="pre">predict_reaction</span></code>
+function. Pass the starting materials in SMILES format, appended with a
+<code class="docutils literal notranslate"><span class="pre">.</span></code> character as shown below.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict_reaction_response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_reaction</span><span class="p">(</span>
+    <span class="s1">&#39;BrBr.c1ccc2cc3ccccc3cc2c1&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Rerun the cell below until SUCCESS is returned.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict_reaction_results</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_predict_reaction_results</span><span class="p">(</span>
+    <span class="n">predict_reaction_response</span><span class="p">[</span><span class="s1">&#39;prediction_id&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">predict_reaction_results</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">][</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;status&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Define a helper function to parse the output.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_reaction_from_smiles</span><span class="p">(</span><span class="n">reaction_smiles</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Chem</span><span class="o">.</span><span class="n">rdChemReactions</span><span class="o">.</span><span class="n">ChemicalReaction</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">AllChem</span><span class="o">.</span><span class="n">ReactionFromSmarts</span><span class="p">(</span><span class="n">reaction_smiles</span><span class="p">,</span> <span class="n">useSmiles</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Use the helper function to show the predicted product.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_reaction_from_smiles</span><span class="p">(</span><span class="n">predict_reaction_results</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">][</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;attempts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;smiles&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>It is also possible to run forward reaction predictions in batches to
+use the service in a high-throughput fashion. Note that this will not
+store the information in any project.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict_rection_batch_response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_reaction_batch</span><span class="p">(</span>
+    <span class="n">precursors_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BrBr.c1ccc2cc3ccccc3cc2c1&#39;</span><span class="p">,</span> <span class="s1">&#39;Cl.c1ccc2cc3ccccc3cc2c1&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Rerun the cell below until a dictionary is returned.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_predict_reaction_batch_results</span><span class="p">(</span>
+    <span class="n">predict_rection_batch_response</span><span class="p">[</span><span class="s1">&#39;task_id&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then we can display the prediction results for each of the reactions in
+the batch.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">reaction_prediction</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;predictions&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Confidence: </span><span class="si">{</span><span class="n">reaction_prediction</span><span class="p">[</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">get_reaction_from_smiles</span><span class="p">(</span><span class="n">reaction_prediction</span><span class="p">[</span><span class="s1">&#39;smiles&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>It is also possible to predict the top N products for each reaction (in
+batch).</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_reaction_batch_topn</span><span class="p">(</span>
+    <span class="n">precursors_lists</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;BrBr&quot;</span><span class="p">,</span> <span class="s2">&quot;c1ccc2cc3ccccc3cc2c1&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;BrBr&quot;</span><span class="p">,</span> <span class="s2">&quot;c1ccc2cc3ccccc3cc2c1CCO&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span> <span class="s2">&quot;CCC(=O)NCCC&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">topn</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Rerun the cell below until SUCCESS is returned.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_predict_reaction_batch_topn_results</span><span class="p">(</span>
+    <span class="n">response</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span><span class="p">[</span><span class="s2">&quot;predictions&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediction not ready, try again&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then we list the predicted products, alongside their confidences, for
+each of the three reactions.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">reaction_predictions</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;predictions&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Outcomes for reaction no </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">:&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">prediction</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reaction_predictions</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">product_smiles</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prediction</span><span class="p">[</span><span class="s2">&quot;smiles&quot;</span><span class="p">])</span>
+        <span class="n">confidence</span> <span class="o">=</span> <span class="n">prediction</span><span class="p">[</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  Product(s) </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">product_smiles</span><span class="si">}</span><span class="s1">, with confidence </span><span class="si">{</span><span class="n">confidence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Save your results</p>
+<p>The results for batch predictions are only stored temporarily in our databases, so we strongly recommend saving them elsewhere.</p>
+</div>
+</section>
+</section>
+<section id="predict-reagents">
+<h2>Predict Reagents<a class="headerlink" href="#predict-reagents" title="Permalink to this headline">¶</a></h2>
+<section id="predict-reagents-needed-to-convert-given-starting-material-to-given-product">
+<h3>Predict reagents needed to convert given starting material to given product<a class="headerlink" href="#predict-reagents-needed-to-convert-given-starting-material-to-given-product" title="Permalink to this headline">¶</a></h3>
+<p>This tool predicts which reagents would allow you to convert your
+starting material to the desired product.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># starting_material_smiles and product_smiles are the two</span>
+<span class="c1"># arguments to pass to predict_reagents()</span>
+<span class="n">starting_material_smiles</span> <span class="o">=</span> <span class="s1">&#39;C1=C(C=O)C=C(Br)C=C1&#39;</span>
+<span class="n">product_smiles</span> <span class="o">=</span> <span class="s1">&#39;C1C=CC(Br)=CC=1/C=C/C(O)=O&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_reagents</span><span class="p">(</span>
+    <span class="n">starting_material_smiles</span><span class="p">,</span>
+    <span class="n">product_smiles</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;prediction_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Once the SMILES strings have been passed to the predict_reagents() function, run the code
+below to check status, until SUCCESS is returned.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_predict_reagents_results</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;prediction_id&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">][</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;status&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>To display the overall predicted reaction results:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">][</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;sequences&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Confidence: </span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">AllChem</span><span class="o">.</span><span class="n">ReactionFromSmarts</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;smiles&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="plan-a-synthesis">
+<h2>Plan a Synthesis<a class="headerlink" href="#plan-a-synthesis" title="Permalink to this headline">¶</a></h2>
+<section id="plan-a-synthesis-starting-from-a-target-molecule-a-retrosynthetic-route-or-an-experimental-procedure-in-text-format">
+<h3>Plan a synthesis starting from a target molecule, a retrosynthetic route, or an experimental procedure in text format<a class="headerlink" href="#plan-a-synthesis-starting-from-a-target-molecule-a-retrosynthetic-route-or-an-experimental-procedure-in-text-format" title="Permalink to this headline">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We recommend this tool be used within the RXN for Chemistry
+GUI instead of via API, since the GUI workflow is more
+user-friendly.</p>
+</div>
+<p>We will convert the retrosynthesis prediction derived previously (see <a class="reference internal" href="#predict-retrosynthesis">Predict retrosynthesis</a>.) into a
+synthesis plan.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The code below may take a few moments to complete.</p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_synthesis_from_sequence_response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">create_synthesis_from_sequence</span><span class="p">(</span>
+    <span class="n">sequence_id</span><span class="o">=</span><span class="n">predict_automatic_retrosynthesis_results</span><span class="p">[</span><span class="s1">&#39;retrosynthetic_paths&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;sequenceId&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Identifier for the synthesis: </span><span class="si">{</span><span class="n">create_synthesis_from_sequence_response</span><span class="p">[</span><span class="s2">&quot;synthesis_id&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The code below will allow you get the actions predicted by the AI model.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">synthesis_id</span> <span class="o">=</span> <span class="n">create_synthesis_from_sequence_response</span><span class="p">[</span><span class="s1">&#39;synthesis_id&#39;</span><span class="p">]</span>
+<span class="n">node_id</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_node_ids</span><span class="p">(</span><span class="n">synthesis_id</span><span class="o">=</span><span class="n">synthesis_id</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Use the code below to print the actions predicted by the AI model.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">actions_and_product</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">get_reaction_settings</span><span class="p">(</span><span class="n">synthesis_id</span><span class="o">=</span><span class="n">synthesis_id</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="n">node_id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">actions_and_product</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">node_actions</span><span class="p">,</span> <span class="n">product</span> <span class="o">=</span> <span class="n">actions_and_product</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">],</span> <span class="n">actions_and_product</span><span class="p">[</span><span class="s1">&#39;product&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">action</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">node_actions</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Action </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">:</span><span class="se">\n</span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing actions</p>
+<p>In the code blow below, the <em>adding acetyl chloride</em> action needs to be changed to not be dropwise
+since solids are added in pins. We also remove the purify action since
+it is not currently supported by commonly used robotic hardware.</p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># update the the action so the solid is not added dropwise</span>
+<span class="n">node_actions</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">][</span><span class="s1">&#39;dropwise&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># remove the purify action</span>
+<span class="n">node_actions</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="c1"># update the node actions</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">update_reaction_settings</span><span class="p">(</span><span class="n">synthesis_id</span><span class="o">=</span><span class="n">synthesis_id</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="n">node_id</span><span class="p">,</span> <span class="n">actions</span><span class="o">=</span><span class="n">node_actions</span><span class="p">,</span> <span class="n">product</span><span class="o">=</span><span class="n">product</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="atom-mapping">
+<h2>Atom Mapping<a class="headerlink" href="#atom-mapping" title="Permalink to this headline">¶</a></h2>
+<section id="map-atoms-from-starting-materials-to-product">
+<h3>Map atoms from starting materials to product<a class="headerlink" href="#map-atoms-from-starting-materials-to-product" title="Permalink to this headline">¶</a></h3>
+<p>Atom mapping of a chemical reaction is a mapping between the atoms in the reactant molecules and the atoms in the product molecules.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">predict_reaction_properties</span></code> function will perform atom mapping
+as shown in the code below.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reaction_prop</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">predict_reaction_properties</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;CC(=O)[OH]&gt;&gt;CC(=O)OCC&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reaction_prop</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">][</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="text-to-procedure">
+<h2>Text to Procedure<a class="headerlink" href="#text-to-procedure" title="Permalink to this headline">¶</a></h2>
+<section id="translate-your-reaction-procedures-from-text-to-exact-steps-to-follow">
+<h3>Translate your reaction procedures from text to exact steps to follow<a class="headerlink" href="#translate-your-reaction-procedures-from-text-to-exact-steps-to-follow" title="Permalink to this headline">¶</a></h3>
+<p>Extract machine-readable actions from natural language text descriptions of chemical
+procedures in paragraph format.</p>
+<p>To extract the actions from a recipe,
+pass the description as a string to the <code class="docutils literal notranslate"><span class="pre">paragraph_to_actions</span></code>
+function.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">actions_from_procedure_results</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">paragraph_to_actions</span><span class="p">(</span>
+    <span class="s1">&#39;To a stirred solution of &#39;</span>
+    <span class="s1">&#39;7-(difluoromethylsulfonyl)-4-fluoro-indan-1-one (110 mg, &#39;</span>
+    <span class="s1">&#39;0.42 mmol) in methanol (4 mL) was added sodium borohydride &#39;</span>
+    <span class="s1">&#39;(24 mg, 0.62 mmol). The reaction mixture was stirred at &#39;</span>
+    <span class="s1">&#39;ambient temperature for 1 hour.&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The output is a standardized procedure (returned in an array), which can be a useful starting
+point for passing information to a robotic platform.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">action</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">actions_from_procedure_results</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">. </span><span class="si">{</span><span class="n">action</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="reaction-digitization">
+<h2>Reaction Digitization<a class="headerlink" href="#reaction-digitization" title="Permalink to this headline">¶</a></h2>
+<section id="convert-images-of-reaction-schemes-to-machine-readable-format">
+<h3>Convert images of reaction schemes to machine-readable format<a class="headerlink" href="#convert-images-of-reaction-schemes-to-machine-readable-format" title="Permalink to this headline">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We recommend this tool be used within the RXN for Chemistry
+site instead of via API (as shown here), since the GUI workflow is more
+user-friendly.</p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload the picture and get back the file id</span>
+<span class="c1"># Use full path and ensure the path is correct</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="s1">&#39;./reaction_scheme.png&#39;</span><span class="p">)</span>
+    <span class="n">file_id</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">][</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">file_id</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File path provided does not exist&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Use the file_id to start the digitization process. This may take some
+time.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">rxn</span><span class="o">.</span><span class="n">digitize_reaction</span><span class="p">(</span><span class="n">file_id</span><span class="p">)</span>
+<span class="n">result</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">][</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;reactions&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Display the results in a human-readable way.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">][</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;reactions&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;reactant&quot;</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   --- </span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> ---&gt;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;product&quot;</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">Tools available via Python API Wrapper</a><ul>
+<li><a class="reference internal" href="#predict-retrosynthesis">Predict Retrosynthesis</a><ul>
+<li><a class="reference internal" href="#predict-possible-retrosynthetic-routes-given-target-molecule">Predict possible retrosynthetic routes given target molecule</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#predict-product">Predict Product</a><ul>
+<li><a class="reference internal" href="#predict-the-product-of-a-chemical-reaction-given-the-starting-materials">Predict the product of a chemical reaction given the starting materials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#predict-reagents">Predict Reagents</a><ul>
+<li><a class="reference internal" href="#predict-reagents-needed-to-convert-given-starting-material-to-given-product">Predict reagents needed to convert given starting material to given product</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plan-a-synthesis">Plan a Synthesis</a><ul>
+<li><a class="reference internal" href="#plan-a-synthesis-starting-from-a-target-molecule-a-retrosynthetic-route-or-an-experimental-procedure-in-text-format">Plan a synthesis starting from a target molecule, a retrosynthetic route, or an experimental procedure in text format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#atom-mapping">Atom Mapping</a><ul>
+<li><a class="reference internal" href="#map-atoms-from-starting-materials-to-product">Map atoms from starting materials to product</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#text-to-procedure">Text to Procedure</a><ul>
+<li><a class="reference internal" href="#translate-your-reaction-procedures-from-text-to-exact-steps-to-follow">Translate your reaction procedures from text to exact steps to follow</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reaction-digitization">Reaction Digitization</a><ul>
+<li><a class="reference internal" href="#convert-images-of-reaction-schemes-to-machine-readable-format">Convert images of reaction schemes to machine-readable format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="intro.html">
+                    <span class="icon">&lt;</span><span>Introduction</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, RXN Wrapper.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

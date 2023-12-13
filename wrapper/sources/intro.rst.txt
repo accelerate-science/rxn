@@ -1,0 +1,202 @@
+################
+Introduction
+################
+
+******************************
+What is RXN for Chemistry?
+******************************
+
+Use AI to predict outcomes of chemical reactions, retrosynthesis pathways, and experimental procedures. All using infrastructure that performs analyses quickly and securely.
+
+Our tool is based on molecular transformer models trained on 2.5 million chemical reactions. This class of models is flexible, non-rule-based, and scalable. Users never have to wait in queues, resulting in faster results and better uptime.
+
+* A visual drawing editor allows you to add your own chemical structures and explore RXN’s features.
+
+* Create projects and collaborate on complex multi-step reaction syntheses or novel chemical reaction designs.
+
+* Simple APIs allow you to run predictions at scale without worrying about provisioning, managing, and monitoring backend resources.
+
+* Integrate these API calls into your own workflows with minimal setup.
+
+* AI models generate results without human bias, creating new discovery opportunities.
+
+*****************************************
+Tools Available in RXN for Chemistry
+*****************************************
+  
+Below are the tools available in the RXN for Chemistry platform.
+
++-----------------------+-----------------------+-----------------------+
+| Tool                  | Description           | Ref.                  |
++=======================+=======================+=======================+
+| **Predict             | Predict possible      | 1, 2                  |
+| retrosynthesis**      | retrosynthetic routes |                       |
+|                       | given a target        |                       |
+|                       | molecule              |                       |
++-----------------------+-----------------------+-----------------------+
+| **Predict product**   | Predict the product   | 3                     |
+|                       | of a chemical         |                       |
+|                       | reaction given the    |                       |
+|                       | starting materials    |                       |
++-----------------------+-----------------------+-----------------------+
+| **Predict reagents**  | Predict the reagents  | N/A                   |
+|                       | needed to convert a   |                       |
+|                       | given starting        |                       |
+|                       | material to a given   |                       |
+|                       | product               |                       |
++-----------------------+-----------------------+-----------------------+
+| **Plan a synthesis**  | Plan a synthesis      | 4, 5                  |
+|                       | starting from a       |                       |
+|                       | target molecule, a    |                       |
+|                       | retrosynthetic route, |                       |
+|                       | or an experimental    |                       |
+|                       | procedure             |                       |
++-----------------------+-----------------------+-----------------------+
+| **Atom mapping**      | Map atoms from        | 6                     |
+|                       | starting materials to |                       |
+|                       | products              |                       |
++-----------------------+-----------------------+-----------------------+
+| **Text to procedure** | Translate your        | 5                     |
+|                       | reaction procedures   |                       |
+|                       | from text to exact    |                       |
+|                       | steps to follow       |                       |
++-----------------------+-----------------------+-----------------------+
+| **Reaction            | Convert images of     | N/A                   |
+| digitization**        | reaction schemes to   |                       |
+|                       | machine-readable      |                       |
+|                       | format                |                       |
++-----------------------+-----------------------+-----------------------+
+
+Please refer to the references below for methodological details of the
+AI models. If you use RXN for Chemistry in your projects, please
+consider citing the relevant article(s).
+
+1. *“Predicting retrosynthetic pathways using transformer-based models
+   and a hyper-graph exploration strategy.”* Schwaller, P.; , Petraglia,
+   R.; Zullo, V.; Nair, V. H.; Haeuselmann, R. A.; Pisoni, R.; Bekas,
+   C.; Iuliano, A.; Laino, T. *Chem. Sci.*, **2020**, *11*, 3316.
+   `[link] <https://doi.org/10.1039/C9SC05704H>`__
+2. *“Biocatalysed synthesis planning using data-driven learning”*
+   Probst, D.; Manica, M.; Nana Teukam, Y. G.; Castrogiovanni, A.;
+   Paratore, F.; Laino, T. *Nat. Commun.* **2022**, *13*, 964.
+   `[link] <https://www.nature.com/articles/s41467-022-28536-w>`__
+3. *“Molecular Transformer: A Model for Uncertainty-Calibrated Chemical
+   Reaction Prediction.”* Schwaller, P.; Laino, T.; Gaudin, T.; Bolgar,
+   P.; Hunter, C. A.; Bekas, C.; Lee, A. A. *ACS Cent. Sci.* **2019**,
+   *5*, 1572. `[link] <https://doi.org/10.1021/acscentsci.9b00576>`__
+4. *“Inferring experimental procedures from text-based representations
+   of chemical reactions.”* Vaucher, A. C.; Schwaller, P.; Geluykens,
+   J.; Nair, V. H.; Iuliano, A.; Laino, T. *Nat. Commun.* **2021**,
+   *12*, 2573. `[link] <https://doi.org/10.1038/s41467-021-22951-1>`__
+5. *“Automated extraction of chemical synthesis actions from
+   experimental procedures.”* Vaucher, A. C.; Zipoli, F.; Geluykens, J.;
+   Nair, V. H.; Schwaller, P.; Laino, T. *Nat. Commun.* **2020**, *11*,
+   3601. `[link] <https://doi.org/10.1038/s41467-020-17266-6>`__
+6. *“Extraction of organic chemistry grammar from unsupervised learning
+   of chemical reactions.”* Schwaller, P.; Hoover, B; Reymond, J.-L.;
+   Strobelt, H.; Laino, T. *Sci. Adv.* **2021**, *7*, eabe4166.
+   `[link] <https://www.science.org/doi/10.1126/sciadv.abe4166>`__
+
+**********************
+Additional Resources
+**********************
+
+For a full set of features, consult the the `online documentation <https://rxn4chemistry.github.io/rxn4chemistry>`__.
+
+There are `tutorials available <https://accelerate-science.github.io/rxn/ui>`__ for the web-based user interface of RXN for Chemistry.
+
+********************************************
+RXN for Chemistry API and Python Wrapper
+********************************************
+
+API access
+#############
+
+Users in the free tier of RXN for Chemistry have UI access only. For
+programmatic access to RXN for Chemistry, users need an Individual or
+Team subscription. These plans feature full API access with no rate
+limitations. You can view subscription options
+`here <https://rxn.app.accelerate.science/rxn/user-subscription>`__.
+
+Python Wrapper
+##################
+
+For ease of programming we provide a Python wrapper that may be used to access the API for RXN for Chemistry.  Use of the wrapper greatly eases the task of coding for access to the REST API.
+
+This documentation contains sample Python code illustrating the use of each of the functions in the Python wrapper.  All of the code snippets in this documentation are available in a single :download:`Jupyter notebook <_static/rxn4chemistry_tour.ipynb>`.
+
+The Python wrapper for RXN for Chemistry may be obtained from the following source: https://github.com/rxn4chemistry/rxn4chemistry/tree/main
+
+Instantiating the Python wrapper
+#################################
+
+Set up the wrapper using a valid API key. If you have an Individual or
+Teams subscription, your API key can be found on the RXN for Chemistry
+`profile page <https://rxn.res.ibm.com/rxn/user/profile>`__.
+
+.. code:: ipython3
+
+    from rxn4chemistry import RXN4ChemistryWrapper
+    
+    api_key = "YOUR_API_KEY"
+    rxn = RXN4ChemistryWrapper(api_key=api_key)
+
+Jupyter Notebook of Code Examples
+####################################
+
+All of the code snippets in this documentation are available in a single :download:`Jupyter notebook <_static/rxn4chemistry_tour.ipynb>`.
+
+*******************************
+Projects in RXN for Chemistry
+*******************************
+
+What is a Project?
+#######################
+
+The artifacts and results from the four RXN tools listed below can be saved to a project. Projects
+help to organize analyses, enable collaboration, and may be shared with colleagues.
+
+-  Predict retrosynthesis
+-  Predict product
+-  Predict reagents
+-  Plan a synthesis
+
+Special note for on-premise installations (uncommon)
+########################################################
+
+For those with an on-premise installation of RXN for Chemistry, you must refer to your on-premise installation via an environment variable:
+
+.. code:: console
+
+    export RXN4CHEMISTRY_BASE_URL="https://some.other.rxn.server"
+
+Or by setting a different host in your python code:
+
+.. code:: ipython3
+
+    # uncomment the line below to set a different host
+    # rxn.set_base_url('https://some.other.rxn.server')
+
+Create a new project
+###############################
+
+To create a project, run the ``create_project`` function.
+
+This step can be skipped if you want to use a project that you have
+created previously.
+
+.. code:: ipython3
+
+    rxn.create_project("rxn4chemistry_tour")
+    rxn.set_project(rxn.project_id)
+    print(f"The project ID is {rxn.project_id}")
+
+Choose an existing project
+##############################
+
+If you have already created the project, you can work within it by
+running ``set_project``.
+
+.. code:: ipython3
+
+    rxn.set_project("YOUR_PROJECT_ID")
