@@ -212,7 +212,7 @@ You may also use the Ketcher visual molecule editor by clicking on the link "Use
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 7:</strong> Click the button "Complete reaction" to begin the analysis</summary>
+<summary class="title"><strong>Step 7:</strong> Click the button "Predict reagents" to begin the analysis</summary>
 <div class="content">
 <div class="paragraph">
 <p><span class="image"><img src="./images/ascreenshot_47.jpg" alt="image"></span></p>
@@ -220,7 +220,7 @@ You may also use the Ketcher visual molecule editor by clicking on the link "Use
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 8:</strong> Click the button "Complete reaction" in the dialog box to run the analysis</summary>
+<summary class="title"><strong>Step 8:</strong> Click the button "Predict reagents" in the dialog box to run the analysis</summary>
 <div class="content">
 <div class="admonitionblock note">
 <table>
@@ -240,7 +240,7 @@ The most recent AI model is selected in the dropdown list by default, but you ma
 </div>
 </details>
 <details>
-<summary class="title"><strong>Step 9:</strong> Upon completion the results will appear as shown below.</summary>
+<summary class="title"><strong>Step 9:</strong> Note the results and confidence score as shown below.</summary>
 <div class="content">
 <div class="admonitionblock note">
 <table>
@@ -249,7 +249,13 @@ The most recent AI model is selected in the dropdown list by default, but you ma
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Predicted reagents are outlined in green.
+<div class="title">What is confidence?</div>
+<div class="paragraph">
+<p>Predictions derived from machine learning models will often come with a computed <em>confidence level</em>.  This number represents the machine&#8217;s estimate of the probability that the model&#8217;s prediction is correct, and that the predicted reaction will proceed as shown.</p>
+</div>
+<div class="paragraph">
+<p>Since it is a probability score the value of the confidence is usually given as a number between 0 and 1.  Confidence scores closest to 1 are considered the best. However, the relative utility of confidence scores depends very heavily on the use case and nature of the training machine learning model.  A confidence score of 0.71 might be considered unacceptable in one use case, but acceptable in another.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -261,7 +267,7 @@ Predicted reagents are outlined in green.
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Use the controls to zoom in and out of the image.
+Use the controls to zoom in and out of the image. Predicted reagents are outlined in <span class="green">GREEN</span>.
 </td>
 </tr>
 </table>
