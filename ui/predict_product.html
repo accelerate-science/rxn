@@ -53,6 +53,25 @@ table {
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
   heap.load("2498670349");
 </script>
+<script>
+var elems = document.getElementsByTagName("details");
+function openAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse All -";
+}
+function closeAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand All +";
+}
+</script>
+
+
 </head>
 <body class="article">
 <div id="header">
@@ -65,6 +84,18 @@ table {
 <div class="paragraph">
 <p>This guide is a tutorial to learn how to use RXN for Chemistry to predict which forward reaction will occur from a set of given reagents.</p>
 </div>
+<table class="tableblock frame-none grid-none fit-content small">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:openAll();">+ Expand All</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:closeAll();">- Close All</a></p></td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary class="title"><strong>Start Tutorial</strong></summary>
 <div class="content">
@@ -135,7 +166,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <p>If selecting <strong>Add to pre-existing project</strong> then use the dropdown labeled "Filter" to select the project.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_0.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_product_3.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -143,7 +174,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 4:</strong> Click "Predict forward reaction"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_26.jpg" alt="Screenshot of: Click &quot;Predict forward reaction&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_4.jpg" alt="Screenshot of: Click &quot;Predict forward reaction&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -151,7 +182,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 5:</strong> In the visual editor, click "Smiles string editor" at the top of the page</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_27.jpg" alt="Screenshot of: Click &quot;Smiles string editor&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_5.jpg" alt="Screenshot of: Click &quot;Smiles string editor&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -174,7 +205,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_28.jpg" alt="Screenshot of: Click this field."></span></p>
+<p><span class="image"><img src="./images/predict_product_6.jpg" alt="Screenshot of: Click this field."></span></p>
 </div>
 </div>
 </details>
@@ -182,7 +213,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 7:</strong> Click "Validate string smiles" to validate the structure in the SMILES string</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_29.jpg" alt="Screenshot of: Click &quot;Validate string smiles&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_7.jpg" alt="Screenshot of: Click &quot;Validate string smiles&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -190,7 +221,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 8:</strong> Click "Load in visual editor" to view a visual model of the molecules and ion</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_30.jpg" alt="Screenshot of: Click &quot;Load in visual editor&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_8.jpg" alt="Screenshot of: Click &quot;Load in visual editor&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -206,7 +237,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 10:</strong> Select the <strong>2020-08-10</strong> machine learning model then click "Run forward reaction prediction"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_31.jpg" alt="Screenshot of: Click &quot;Run forward reaction prediction&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_10.jpg" alt="Screenshot of: Click &quot;Run forward reaction prediction&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -247,7 +278,7 @@ The process of generating the first result shown below can take anywhere from a 
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_32.jpg" alt="Screenshot of: Click &quot;Generate more outcomes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_11.jpg" alt="Screenshot of: Click &quot;Generate more outcomes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -267,7 +298,7 @@ The process of generating the first result show below can take anywhere from a f
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_33.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_product_12.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -290,7 +321,7 @@ The algorithms for predicting reaction properties take a representation of the r
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_34.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_product_13.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -298,7 +329,7 @@ The algorithms for predicting reaction properties take a representation of the r
 <summary class="title"><strong>Step 14:</strong> In the dialog box select "atom-mapping-2020" under "AI model" then click <strong>Get prediction</strong></summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_35.jpg" alt="Screenshot of: Click this dropdown."></span></p>
+<p><span class="image"><img src="./images/predict_product_14.jpg" alt="Screenshot of: Click this dropdown."></span></p>
 </div>
 </div>
 </details>
@@ -347,7 +378,7 @@ The algorithms for predicting reaction properties take a representation of the r
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_36.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_product_16.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -355,7 +386,7 @@ The algorithms for predicting reaction properties take a representation of the r
 <summary class="title"><strong>Step 17:</strong> After reading the TMAP guidance, click "Continue with TMAP"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_11.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_product_17.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -375,7 +406,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_12.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_product_18.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -386,7 +417,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>After you have finished exploring the TMAP close it to return to the reactions view.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_13.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_product_19.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -400,7 +431,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>Click the same icon again to close the Similar reactions list.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_40.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_product_20.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -428,7 +459,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_41.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_product_21.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -451,7 +482,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>A small box will open with a heat map of attention weights calculated when the product prediction was derived.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_42.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_product_22.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -488,7 +519,7 @@ Right-click on the heat map and select "Open image in new tab" for a higher reso
 <summary class="title"><strong>Step 23:</strong> Click the "X" in the upper right to return to the RXN for Chemistry Home page</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_43.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_product_23.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>

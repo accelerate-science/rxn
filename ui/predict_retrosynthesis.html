@@ -53,6 +53,25 @@ table {
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
   heap.load("2498670349");
 </script>
+<script>
+var elems = document.getElementsByTagName("details");
+function openAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse All -";
+}
+function closeAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand All +";
+}
+</script>
+
+
 </head>
 <body class="article">
 <div id="header">
@@ -65,6 +84,18 @@ table {
 <div class="paragraph">
 <p>This guide is a tutorial to learn how to predict a retrosynthesis using RXN for Chemistry.</p>
 </div>
+<table class="tableblock frame-none grid-none fit-content small">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:openAll();">+ Expand All</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:closeAll();">- Close All</a></p></td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary class="title"><strong>Start Tutorial</strong></summary>
 <div class="content">
@@ -124,7 +155,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <summary class="title"><strong>Step 2:</strong> From the RXN for Chemistry Home screen, click "Predict retrosynthetic routes"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_61.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic routes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_2.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic routes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -135,7 +166,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <p>If selecting <strong>Add to pre-existing project</strong> then use the dropdown labeled "Filter" to select the project.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_62.jpg" alt="Screenshot of: Click the &quot;Filter&#8230;&#8203;&quot; field."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_3.jpg" alt="Screenshot of: Click the &quot;Filter&#8230;&#8203;&quot; field."></span></p>
 </div>
 </div>
 </details>
@@ -155,7 +186,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_63.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_4.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -163,7 +194,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 5:</strong> Click "Predict retrosynthetic routes"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_64.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic routes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_5.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic routes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -171,7 +202,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 6:</strong> In the visual editor, click "Smiles string editor" at the top of the page</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_27.jpg" alt="Screenshot of: Click &quot;Smiles string editor&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_6.jpg" alt="Screenshot of: Click &quot;Smiles string editor&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -195,7 +226,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_28.jpg" alt="Screenshot of: Click this field."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_7.jpg" alt="Screenshot of: Click this field."></span></p>
 </div>
 </div>
 </details>
@@ -203,7 +234,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 8:</strong> Click "Validate string smiles" to validate the structure in the SMILES string</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_29.jpg" alt="Screenshot of: Click &quot;Validate string smiles&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_8.jpg" alt="Screenshot of: Click &quot;Validate string smiles&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -211,7 +242,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 9:</strong> Click "Load in visual editor" to view a visual model of the molecule</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_30.jpg" alt="Screenshot of: Click &quot;Load in visual editor&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_9.jpg" alt="Screenshot of: Click &quot;Load in visual editor&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -219,7 +250,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 <summary class="title"><strong>Step 10:</strong> After viewing the molecule in the visual editor, click "Predict retrosynthetic route"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_69.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic route&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_10.jpg" alt="Screenshot of: Click &quot;Predict retrosynthetic route&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -247,7 +278,7 @@ If you have a file containing SMILES strings you may use the "From file" option 
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_70.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_11.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -273,7 +304,7 @@ AIZ and RXN are both machine learning models that have been trained on slightly 
 <p>After selecting the AI model version, you may move the slide control labeled "Speed/Quality Tuning" to set a balance between how rapidly results are completed versus how exhaustive the search is.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_71.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_12.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -296,7 +327,7 @@ MSSR is the <strong>Minimum Sum of Squared Running Digital Sum</strong>. Lower v
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_72.jpg" alt="Screenshot of: Click &quot;Show Advanced Options&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_13.jpg" alt="Screenshot of: Click &quot;Show Advanced Options&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -304,7 +335,7 @@ MSSR is the <strong>Minimum Sum of Squared Running Digital Sum</strong>. Lower v
 <summary class="title"><strong>Step 14:</strong> Click "Predict Retrosynthetic Route" to begin the analysis</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_73.jpg" alt="Screenshot of: Click &quot;Predict Retrosynthetic Route&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_14.jpg" alt="Screenshot of: Click &quot;Predict Retrosynthetic Route&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -327,7 +358,7 @@ The computation of all of the retrosynthesis reactions may take some time (up to
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_74.jpg" alt="Screenshot of: Click &quot;Back to Retrosynthetic Routes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_15.jpg" alt="Screenshot of: Click &quot;Back to Retrosynthetic Routes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -358,7 +389,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 <summary class="title"><strong>Step 17:</strong> From Home page, click "Projects"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_75.jpg" alt="Screenshot of: Click &quot;Projects&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_17.jpg" alt="Screenshot of: Click &quot;Projects&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -366,7 +397,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 <summary class="title"><strong>Step 18:</strong> Click on the Project containing the retrosynthesis analysis.</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_76.jpg" alt="Screenshot of: Click &quot;Ray Lopez&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_18.jpg" alt="Screenshot of: Click &quot;Ray Lopez&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -374,7 +405,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 <summary class="title"><strong>Step 19:</strong> Select "AI Predictions" from the top menu, then "Retrosynthetic routes"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_77.jpg" alt="Screenshot of: Click &quot;Retrosynthetic routes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_19.jpg" alt="Screenshot of: Click &quot;Retrosynthetic routes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -382,7 +413,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 <summary class="title"><strong>Step 20:</strong> From the <strong>Retrosynthetic routes</strong> listing select the analysis you wish to view.</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_78.jpg" alt="Screenshot of: Click &quot;demo project 1_20230922_18:29:46.815&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_20.jpg" alt="Screenshot of: Click &quot;demo project 1_20230922_18:29:46.815&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -408,7 +439,7 @@ The retrosynthesis computations may take several minutes. You can log off from R
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_79.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_21.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -428,7 +459,7 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_80.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_22.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -439,7 +470,7 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 <p>This option will allow you to view the different reaction sequences identified by RXN for Chemistry.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_81.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_23.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -480,7 +511,7 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_82.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_24.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -488,7 +519,7 @@ Alternative Reactions are those reactions that may occur with lower probabiliity
 <summary class="title"><strong>Step 25:</strong> After reading the TMAP guidance, click "Continue with TMAP"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_11.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_25.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -508,7 +539,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_12.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_26.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -519,7 +550,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>After you have finished exploring the TMAP, close it to return to the reactions view.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_13.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_retrosynthesis_27.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>

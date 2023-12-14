@@ -53,6 +53,25 @@ table {
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
   heap.load("2498670349");
 </script>
+<script>
+var elems = document.getElementsByTagName("details");
+function openAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse All -";
+}
+function closeAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand All +";
+}
+</script>
+
+
 </head>
 <body class="article">
 <div id="header">
@@ -65,6 +84,18 @@ table {
 <div class="paragraph">
 <p>This guide is a tutorial to learn how to use RXN for Chemistry to predict the reagents needed to convert a given starting material to a desired product.</p>
 </div>
+<table class="tableblock frame-none grid-none fit-content small">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:openAll();">+ Expand All</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:closeAll();">- Close All</a></p></td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary class="title"><strong>Start Tutorial</strong></summary>
 <div class="content">
@@ -135,7 +166,7 @@ See our <a href="./quick_start.html">RXN for Chemistry Quick Start</a> for direc
 <p>If selecting <strong>Add to pre-existing project</strong> then use the dropdown labeled "Filter" to select the project.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_0.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_3.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -175,7 +206,7 @@ You may also use the Ketcher visual molecule editor by clicking on the link "Use
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_45.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_5.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -207,7 +238,7 @@ You may also use the Ketcher visual molecule editor by clicking on the link "Use
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_46.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_6.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -215,7 +246,7 @@ You may also use the Ketcher visual molecule editor by clicking on the link "Use
 <summary class="title"><strong>Step 7:</strong> Click the button "Predict reagents" to begin the analysis</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_47.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_7.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -235,7 +266,7 @@ The most recent AI model is selected in the dropdown list by default, but you ma
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_48.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_8.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -296,7 +327,7 @@ The process of generating the first result show below can take anywhere from a f
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_32.jpg" alt="Screenshot of: Click &quot;Generate more outcomes&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_10.jpg" alt="Screenshot of: Click &quot;Generate more outcomes&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -316,7 +347,7 @@ The process of generating the first result show below can take anywhere from a f
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_33.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_11.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -339,7 +370,7 @@ The algorithms for predicting reaction properties take a representation of the r
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_34.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_12.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -347,7 +378,7 @@ The algorithms for predicting reaction properties take a representation of the r
 <summary class="title"><strong>Step 13:</strong> In the dialog box select "atom-mapping-2020" under "AI model" then click <strong>Get prediction</strong></summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_35.jpg" alt="Screenshot of: Click this dropdown."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_13.jpg" alt="Screenshot of: Click this dropdown."></span></p>
 </div>
 </div>
 </details>
@@ -396,7 +427,7 @@ The algorithms for predicting reaction properties take a representation of the r
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_36.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_15.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -404,7 +435,7 @@ The algorithms for predicting reaction properties take a representation of the r
 <summary class="title"><strong>Step 16:</strong> After reading the TMAP guidance, click "Continue with TMAP"</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_11.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
+<p><span class="image"><img src="./images/predict_reagents_16.jpg" alt="Screenshot of: Click &quot;Continue with TMAP&quot;"></span></p>
 </div>
 </div>
 </details>
@@ -424,7 +455,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_12.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_17.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -435,7 +466,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>After you have finished exploring the TMAP close it to return to the reactions view.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_13.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_18.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -449,7 +480,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>Click the same icon again to close the Similar reactions list.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_40.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_19.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>
@@ -477,7 +508,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_41.jpg" alt="Screenshot of: Click here."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_20.jpg" alt="Screenshot of: Click here."></span></p>
 </div>
 </div>
 </details>
@@ -488,7 +519,7 @@ The legend on the right hand side of the TMAP shows you the colors used to repre
 <p>A small box will open with a heat map of attention weights calculated when the product prediction was derived.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_42.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_21.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -525,7 +556,7 @@ Right-click on the heat map and select "Open image in new tab" for a higher reso
 <summary class="title"><strong>Step 22:</strong> Click the "X" in the upper right to return to the RXN for Chemistry Home page</summary>
 <div class="content">
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_43.jpg" alt="Screenshot of: Click this icon."></span></p>
+<p><span class="image"><img src="./images/predict_reagents_22.jpg" alt="Screenshot of: Click this icon."></span></p>
 </div>
 </div>
 </details>

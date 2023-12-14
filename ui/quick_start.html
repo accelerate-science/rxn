@@ -53,6 +53,25 @@ table {
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
   heap.load("2498670349");
 </script>
+<script>
+var elems = document.getElementsByTagName("details");
+function openAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse All -";
+}
+function closeAll() {
+  for (var i = 0; i <= 40; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand All +";
+}
+</script>
+
+
 </head>
 <body class="article">
 <div id="header">
@@ -65,6 +84,18 @@ table {
 <div class="paragraph">
 <p>This guide is a tutorial to familiarize yourself with the user interface of RXN for Chemistry.</p>
 </div>
+<table class="tableblock frame-none grid-none fit-content small">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:openAll();">+ Expand All</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="javascript:closeAll();">- Close All</a></p></td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary class="title"><strong>Product Overview</strong></summary>
 <div class="content">
@@ -140,7 +171,7 @@ An RXN for Chemistry account is required to complete this Quick Start.
 <p>Visit <a href="https://rxn.app.accelerate.science/" class="bare">https://rxn.app.accelerate.science/</a> and click on the button in the upper right of the screen labeled "Get Started!"</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_86.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_1.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -157,7 +188,7 @@ An RXN for Chemistry account is required to complete this Quick Start.
 <p>Alternatively, you may use your login credentials from Google or Facebook to log in to RXN for Chemistry.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_87.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_2.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
@@ -168,7 +199,7 @@ An RXN for Chemistry account is required to complete this Quick Start.
 <p>After authenticating successfully, you will be taken to the RXN for Chemistry Home page. Click on the button <strong>Add new project</strong> in the upper right of the Home view.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_88.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_3.jpg" alt="image"></span></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -194,7 +225,7 @@ The Home view contains access to all of the major functions of RXN for Chemistry
 <p>After entering a name for your new project, click on the button <strong>Create a new project</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_89.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_4.jpg" alt="image"></span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -217,7 +248,7 @@ In the RXN for Chemisty tool, models of molecules and reactions may be organized
 <p>You will be taken to the Project Dashboard for your new project. After viewing your project Dashboard, click on the <strong>Home</strong> link on the left hand menu.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_90.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_5.jpg" alt="image"></span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -240,7 +271,7 @@ The Project Dashboard page contains a summary of the work and artifacts produced
 <p>From the Home page, click on <strong>Projects</strong> in the left hand menu.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_91.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_6.jpg" alt="image"></span></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -263,7 +294,7 @@ The <strong>Projects</strong> link in the upper left of the Home page will take 
 <p>After viewing the Project list, click on the <strong>Home</strong> link to return to the Home page.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_92.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_7.jpg" alt="image"></span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -291,7 +322,7 @@ The <strong>Projects</strong> link in the upper left of the Home page will take 
 <p>From the Home page, click on <strong>Predict retrosynthesis</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/ascreenshot_93.jpg" alt="image"></span></p>
+<p><span class="image"><img src="./images/quick_start_8.jpg" alt="image"></span></p>
 </div>
 </div>
 </details>
